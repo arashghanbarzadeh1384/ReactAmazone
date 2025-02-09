@@ -6,8 +6,8 @@ const Product = () => {
 
   const productData = async () => {
     try {
-      const productApi = await axios.get("http://localhost:3000/Product");
-      setProduct(productApi.data);
+      const productApi = await axios.get("https://arashprogramming.github.io/Jason-file/db.json");
+      setProduct(productApi.data.Product);
     } catch (error) {
       console.log(error.message);
     }

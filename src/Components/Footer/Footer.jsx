@@ -5,9 +5,8 @@ const Footer = () => {
   const [footer, setFooterData] = useState(null);
   const footerip = async () => {
     try {
-      const footerData = await axios.get("http://localhost:3000/footer1");
-      console.log(footerData.data);
-      setFooterData(footerData.data);
+      const footerData = await axios.get("https://arashprogramming.github.io/Jason-file/db.json")
+      setFooterData(footerData.data.footer1);
     } catch (error) {
       console.log(error.message);
     }

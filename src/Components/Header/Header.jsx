@@ -7,8 +7,10 @@ const Header = () => {
   const [menu, setMenu] = useState(null);
   const menuData = async () => {
     try {
-      const menuRespone = await axios.get("http://localhost:3000/menu");
-      setMenu(menuRespone.data);
+      const menuRespone = await axios.get(
+        "https://arashprogramming.github.io/Jason-file/db.json"
+      );
+      setMenu(menuRespone.data.menu);
     } catch (error) {
       console.log(error.message);
     }
@@ -22,7 +24,13 @@ const Header = () => {
     <>
       <div className="bg-[#121921] w-[100%] h-[55px] text-white flex items-center px-4 gap-4 font-bold">
         <div className="w-[40%] text-righ flex justify-center items-center">
-          <img className="mt-2 hover:border-2 border-white p-1 " src="../../../public/image/AmazonLogo.png" width="100" height="100" alt="" />
+          <img
+            className="mt-2 hover:border-2 border-white p-1 "
+            src="../../../public/image/AmazonLogo.png"
+            width="100"
+            height="100"
+            alt=""
+          />
           <a className="ml-[50px] hover:border-2 border-white p-1" href="#">
             Iran, Islamic Rep...
           </a>
