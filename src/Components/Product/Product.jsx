@@ -6,7 +6,7 @@ const Product = () => {
 
   const productData = async () => {
     try {
-      const productApi = await axios.get("https://arashprogramming.github.io/Jason-file/db.json");
+      const productApi = await axios.get("https://arashghanbarzadeh1384.github.io/Jason-file/db.json");
       setProduct(productApi.data.Product);
     } catch (error) {
       console.log(error.message);

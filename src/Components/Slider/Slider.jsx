@@ -10,7 +10,7 @@ export default function App() {
   const [slider, setSlider] = useState(null);
   const sliderData = async () => {
     try {
-      const sliderData = await axios.get("https://arashprogramming.github.io/Jason-file/db.json");
+      const sliderData = await axios.get("https://arashghanbarzadeh1384.github.io/Jason-file/db.json");
       setSlider(sliderData.data.Slider);
     } catch (error) {
       console.log(error.message);
